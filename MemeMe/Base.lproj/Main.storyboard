@@ -21,13 +21,23 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="56D-CZ-g3d">
                                 <rect key="frame" x="0.0" y="28" width="600" height="528"/>
                                 <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WeZ-D6-rbx">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <items>
+                                            <barButtonItem systemItem="action" id="kXJ-Lt-qdL">
+                                                <connections>
+                                                    <action selector="shareMeme:" destination="BYZ-38-t0r" id="De9-EC-Wlt"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Top" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHo-3f-WPO">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="17"/>
+                                        <rect key="frame" x="0.0" y="52" width="600" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="IUU-zj-oGr">
-                                        <rect key="frame" x="0.0" y="25" width="600" height="426"/>
+                                        <rect key="frame" x="0.0" y="77" width="600" height="374"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTE-uH-ftS">
                                         <rect key="frame" x="0.0" y="459" width="600" height="17"/>
@@ -38,13 +48,13 @@
                                         <rect key="frame" x="0.0" y="484" width="600" height="44"/>
                                         <items>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="t62-es-dKt"/>
-                                            <barButtonItem title="Camera" style="plain" id="A62-ev-REv">
+                                            <barButtonItem style="plain" systemItem="camera" id="A62-ev-REv">
                                                 <connections>
                                                     <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="CsT-8x-Kv5"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="qL9-X4-ftU"/>
-                                            <barButtonItem title="Album" style="plain" id="WnJ-gj-MpX">
+                                            <barButtonItem style="plain" systemItem="organize" id="WnJ-gj-MpX">
                                                 <connections>
                                                     <action selector="pickImageFromAlbum:" destination="BYZ-38-t0r" id="BRk-fj-Q07"/>
                                                 </connections>
@@ -69,6 +79,7 @@
                         <outlet property="bottomTextField" destination="lTE-uH-ftS" id="qcc-9l-N4r"/>
                         <outlet property="cameraButton" destination="A62-ev-REv" id="plF-av-gZq"/>
                         <outlet property="imagePickerView" destination="IUU-zj-oGr" id="Jbh-pd-x88"/>
+                        <outlet property="shareButton" destination="kXJ-Lt-qdL" id="K4C-XT-v8p"/>
                         <outlet property="topTextField" destination="VHo-3f-WPO" id="fo8-sM-yci"/>
                     </connections>
                 </viewController>
