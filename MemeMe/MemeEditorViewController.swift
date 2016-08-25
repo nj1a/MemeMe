@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorViewController.swift
 //  MemeMe
 //
 //  Created by NATHAN JIA on 2016-08-22.
@@ -100,6 +100,10 @@ class MemeEditorViewController: UIViewController, UITextFieldDelegate,
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
+    @IBAction func cancel(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     func configureTextFields(textField: UITextField) {
         // the centre has to be applied after attr are set to work properly
         textField.delegate = self
@@ -197,6 +201,6 @@ class MemeEditorViewController: UIViewController, UITextFieldDelegate,
             bottomTextField.text!, image: imagePickerView.image!, memedImage:
             self.memedImage)
         
-        memes.append(meme)
+        (UIApplication.sharedApplication().delegate as! AppDelegate).memes.append(meme)
     }
 }

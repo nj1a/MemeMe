@@ -9,9 +9,6 @@
 import Foundation
 import UIKit
 
-// stroage of memes
-var memes = [Meme]()
-
 struct Meme {
     var topText: String
     var bottomText: String

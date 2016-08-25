@@ -3,7 +3,7 @@
 //  MemeMe
 //
 //  Created by NATHAN JIA on 2016-08-22.
-//  Copyright © 2016 njiaNathan Jia. All rights reserved.
+//  Copyright © 2016 Nathan Jia. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    // stroage of memes
+    var memes = [Meme]()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
