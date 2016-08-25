@@ -202,5 +202,6 @@ class MemeEditorViewController: UIViewController, UITextFieldDelegate,
             self.memedImage)
         
         (UIApplication.sharedApplication().delegate as! AppDelegate).memes.append(meme)
+        print((UIApplication.sharedApplication().delegate as! AppDelegate).memes.count)
     }
 }
