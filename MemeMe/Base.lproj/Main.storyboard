@@ -32,20 +32,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="feW-HX-Nwg">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="181" height="139"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCell" id="4hO-Em-wGf">
-                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionCell" id="4hO-Em-wGf" customClass="MemeCollectionCell" customModule="MemeMe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="181" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="181" height="139"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTm-s8-pSJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="139"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <outlet property="imageView" destination="cTm-s8-pSJ" id="s80-Cb-Ot0"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -55,6 +63,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="bY9-33-WIY"/>
                     <connections>
+                        <outlet property="flowLayout" destination="feW-HX-Nwg" id="gDH-FS-uiF"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="collectionToAddMeme" id="5FU-rJ-k11"/>
                     </connections>
                 </collectionViewController>
@@ -271,6 +280,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iEW-lf-MMS"/>
+        <segue reference="5FU-rJ-k11"/>
     </inferredMetricsTieBreakers>
 </document>
